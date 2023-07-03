@@ -3,12 +3,12 @@ import java.util.HashMap;
 
 import Vo.Student;
 import Vo.Emp;
-import service.VoidMethod;
+import service.voidMethod;
 
-public class VoidMain {
+public class voidMain {
 
 	public static void main(String[] args) {
-		VoidMethod vm = new VoidMethod();
+		voidMethod vm = new voidMethod();
 		vm.voidParm();
 		
 		int num = 8;

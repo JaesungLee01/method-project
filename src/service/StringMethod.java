@@ -1,5 +1,9 @@
 package service;
-
+	
+import java.lang.reflect.Member;
+import java.util.*;
+import Vo.*;
+	
 public class StringMethod {
 	/*
 	 ﻿2. 리턴타입 : 기본타입
@@ -40,4 +44,90 @@ public class StringMethod {
 		
 	}
 	
+	public Member m66(Member m) {
+		if(m == null || m.getpw() == null) {
+			System.out.println("멤버 정보가 없습니다");
+				return null;
+		}
+		ArrayList<Member> mlist = new ArrayList<>();
+		
+		Member m1 = new Member();
+		m1.setid(100);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public String[] m78(ArrayList<String> list) {
+	      if(list == null) {
+	         System.out.println("입력 리스트가 없습니다.");
+	         return null;
+	      }
+	      int listSize = list.size();
+	      String[] array = new String[listSize];
+	      int currIdx = 0;
+	      
+	      for(String s : list) {
+	         array[currIdx] = s;
+	         currIdx++;
+	      }
+	      return array;
+	   }
+	
+	public ArrayList<String> m84(int[] arr){
+		if(arr == null) {
+			return null;
+		}
+		
+		ArrayList<String> list = new ArrayList<String>();
+		
+		for(int n : arr) {
+			if(n%2 == 0) {
+			list.add(""+n);
+			}
+		}
+		
+		return list;
+	}
+	
+	
+	public HashMap<String, Object> m96(int empNo, String ename, boolean retirer, int deptNo, String dname){
+		 
+		
+		HashMap<String, Object> map = new HashMap<>();
+		
+		Emp2 emp = new Emp2();
+		emp.setEmpNo(empNo);
+		emp.setEname(ename);
+		emp.setRetirer(retirer);
+		
+		Dept dept = new Dept();
+		dept.setDeptNo(deptNo);
+		dept.setDname(dname);
+		
+		return map;
+	}
+	
+	// test code 추가하는 방법
+	// 1) 테스트용 클래스를 만들고 테스트 클래스 안에 static main() 에서
+	// 테스트 하고자 하는 메소드를 테스트
+	// 2) 테스트 하고자 하는 메소드의 클래스안에 static main()을 만들어서 호출
+	public static void main(String[] args) {
+		MapReturnMethod mrm = new MapReturnMethod();
+		HashMap<String, Object>map = mrm.m910(1,"구디", false, 100, "운영");
+		
+		Emp2 emp = (Emp2)(map.get("emp"));
+		Dept dept = (Dept)(map.get("dept"));
+		
+		System.out.printf("%s님의 부서는 %s 입니다%n" , emp.getEname(),dept.getDname());
+	}
 }
+
+	

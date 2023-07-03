@@ -38,6 +38,7 @@ public class PrimitiveMethod {
 	public boolean primitiveParam(int birth) {
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		if(birth < 0 || birth > currentYear) {
+			
 			System.out.println("잘못된입력");
 			return false;
 		}

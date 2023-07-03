@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class VoidMethod {
+public class voidMethod {
 	// 매개변수 : 없음
 	public void voidParm() {
 		System.out.print("안녕하세요 구디아카데미입니다.");
